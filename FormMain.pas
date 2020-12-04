@@ -12,6 +12,7 @@ type
     pnlRCC: TPanel;
     pnlButtons: TPanel;
     btnShowNews: TBitBtn;
+    lvRCC: TListView;
 
     procedure btnShowNewsClick(Sender: TObject);
   private

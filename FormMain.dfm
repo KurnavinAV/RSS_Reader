@@ -23,6 +23,20 @@ object fmMain: TfmMain
     Caption = 'pnlRCC'
     ShowCaption = False
     TabOrder = 0
+    object lvRCC: TListView
+      Left = 1
+      Top = 1
+      Width = 713
+      Height = 615
+      Align = alClient
+      Columns = <
+        item
+        end>
+      TabOrder = 0
+      ViewStyle = vsReport
+      ExplicitLeft = 2
+      ExplicitTop = 4
+    end
   end
   object pnlButtons: TPanel
     Left = 0

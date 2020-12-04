@@ -25,7 +25,6 @@ styles
 *.chp
 *.drc
 *.obj
-*.ico
 *.cur
 *.vlb
 *.bpm
@@ -45,3 +44,4 @@ _errors_log.txt
 
 *.skincfg
 *.eof
+/last-build-log.txt

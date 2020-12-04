@@ -1,7 +1,7 @@
 program RSSReader;
 
 uses
-  FMX.Forms,
+  VCL.Forms,
   FormMain in 'FormMain.pas' {fmMain},
   HttpClient in 'HttpClient.pas',
   RSSModel in 'RSSModel.pas',
