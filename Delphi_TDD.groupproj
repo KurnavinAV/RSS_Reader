@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6037DD2D-7F0D-4225-8B4F-716B8D6B4025}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="RSSReader.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\RSSReaderTests.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RSSReaderFMX.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="RSSReader">
+        <MSBuild Projects="RSSReader.dproj"/>
+    </Target>
+    <Target Name="RSSReader:Clean">
+        <MSBuild Projects="RSSReader.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RSSReader:Make">
+        <MSBuild Projects="RSSReader.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RSSReaderTests">
+        <MSBuild Projects="Test\RSSReaderTests.dproj"/>
+    </Target>
+    <Target Name="RSSReaderTests:Clean">
+        <MSBuild Projects="Test\RSSReaderTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RSSReaderTests:Make">
+        <MSBuild Projects="Test\RSSReaderTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RSSReaderFMX">
+        <MSBuild Projects="RSSReaderFMX.dproj"/>
+    </Target>
+    <Target Name="RSSReaderFMX:Clean">
+        <MSBuild Projects="RSSReaderFMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RSSReaderFMX:Make">
+        <MSBuild Projects="RSSReaderFMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="RSSReader;RSSReaderTests;RSSReaderFMX"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="RSSReader:Clean;RSSReaderTests:Clean;RSSReaderFMX:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="RSSReader:Make;RSSReaderTests:Make;RSSReaderFMX:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
