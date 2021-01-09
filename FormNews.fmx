@@ -101,7 +101,8 @@
         'http://static.feed.rbc.ru/rbc/logical/footer/news.rss'
         'https://habr.com/ru/rss/all/all/'
         'https://www.ixbt.com/export/news.rss'
-        'https://www.ixbt.com/export/articles.rss')
+        'https://www.ixbt.com/export/articles.rss'
+        'https://getitnow.embarcadero.com/feed/')
       ItemIndex = 0
       Position.X = 8.000000000000000000
       Position.Y = 16.000000000000000000
